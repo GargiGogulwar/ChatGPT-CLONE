@@ -1,107 +1,91 @@
-🌟 ChatGPT-CLONE
+# 🌟 ChatGPT-CLONE
 
-A fully customizable clone of ChatGPT built using React (Vite), Node.js, Express, MongoDB, and OpenAI API.
-Supports user authentication, email verification, JWT-based login, and a beautiful chat UI similar to ChatGPT.
+A fully customizable clone of ChatGPT built using **React (Vite)**, **Node.js**, **Express**, **MongoDB**, and **OpenAI API**.  
+Supports **user authentication**, **email verification**, **JWT-based login**, and a beautiful chat UI similar to ChatGPT.
 
-🚀 Features
-🔐 Authentication & Security
+---
 
-User sign-up + login
+# 🚀 Features
 
-Email verification using Gmail SMTP
+## 🔐 Authentication & Security
+- User **sign-up + login**
+- Email verification via **Gmail SMTP**
+- Password hashing (**bcrypt**)
+- JWT authentication for protected routes
 
-Password hashing (bcrypt)
+## 💬 AI Chatbot
+- Chat interface similar to ChatGPT
+- Uses OpenAI’s API (customizable model)
+- Backend proxy for secure API calls
 
-JWT authentication for protected routes
+## 📦 Backend (Node + Express)
+- REST API endpoints
+- MongoDB using Mongoose
+- MVC structure (Routes + Controllers)
+- Environment-based config
 
-💬 AI Chatbot
+## 🎨 Frontend (React + Vite)
+- Modern, fast UI
+- Tailwind CSS styling
+- Axios API service
+- Chat bubbles & clean UI components
 
-Chat interface similar to ChatGPT
+## 📧 Email System
+- SMTP using Gmail
+- Sends verification emails
+- MAIL_EMAIL + MAIL_SECRET configurable
 
-Uses OpenAI’s API (customizable model)
+## 🗄 Database (MongoDB)
+- Stores users
+- Stores verification status
+- (Optional) chat history
 
-Backend proxy for secure API calls
+---
 
-📦 Backend (Node + Express)
+# 🛠 Tech Stack
 
-REST API
+### **Frontend**
+- React (Vite)
+- Tailwind CSS
+- Axios
 
-MongoDB via Mongoose
+### **Backend**
+- Node.js  
+- Express.js  
+- Mongoose  
+- JWT  
+- Nodemailer  
 
-Controllers + Routes structured cleanly
+### **AI**
+- OpenAI API (gpt-3.5-turbo-instruct or newer)
 
-Environment variable based configuration
+---
 
-🎨 Frontend (React + Vite)
+# 📁 Folder Structure
 
-Modern, fast UI
-
-Chat interface with scroll, message bubbles, avatars
-
-Axios API service
-
-Clean component structure
-
-📧 Email System
-
-SMTP using Gmail
-
-Sends verification links
-
-Configurable MAIL_EMAIL + MAIL_PASSWORD
-
-🗄 Database
-
-MongoDB for storing users
-
-Stores verification status
-
-Stores chat history (optional in your version)
-
-🛠 Tech Stack
-Frontend
-
-React (Vite)
-
-Tailwind CSS
-
-Axios
-
-Backend
-
-Node.js
-
-Express.js
-
-Mongoose
-
-JWT
-
-Nodemailer
-
-AI
-
-OpenAI API (gpt-3.5-turbo-instruct or newer)
-
-📁 Folder Structure
 ChatGPT-CLONE/
 │
-├── client/                  # Frontend (React + Vite)
-│   ├── src/
-│   ├── public/
-│   └── .env.local
+├── client/ # Frontend (React + Vite)
+│ ├── src/
+│ ├── public/
+│ └── .env.local
 │
-├── server/                  # Backend (Node + Express)
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── db/
-│   └── .env
+├── server/ # Backend (Node + Express)
+│ ├── routes/
+│ ├── controllers/
+│ ├── models/
+│ ├── db/
+│ └── .env
 │
 └── README.md
 
-⚙️ Environment Variables
-Backend (server/.env)
+
+---
+
+# ⚙️ Environment Variables
+
+## 🟦 Backend (`server/.env`)
+```env
 PORT=5000
 MONGO_URL=mongodb://127.0.0.1:27017/chatgpt
 SITE_URL=http://localhost:5173
@@ -110,12 +94,11 @@ OPENAI_API_KEY=your_openai_key
 OPENAI_ORGANIZATION=
 MAIL_EMAIL=your_gmail_account
 MAIL_SECRET=your_app_password
-
-Frontend (client/.env.local)
-VITE_CLIENT_ID=your_google_oauth_id   # only required if using Google login
-
+🟩 Frontend (client/.env.local)
+VITE_CLIENT_ID=your_google_oauth_id
+```
 🧩 How to Run the Project Locally
-1️⃣ Clone the Repo
+1️⃣ Clone the Repository
 git clone https://github.com/GargiGogulwar/ChatGPT-CLONE.git
 
 2️⃣ Install Backend Dependencies
@@ -130,43 +113,49 @@ npm run dev
 
 4️⃣ Open the App
 
-Go to:
-
 👉 http://localhost:5173
 
 🔑 API Keys & Setup
 ✔ OpenAI API Key
 
-Create from
+Create one from:
 https://platform.openai.com/settings/keys
 
 ✔ Gmail App Password
 
-Go to:
+Steps:
 
-Google Account → Security → App Passwords
+Google Account
 
-Create a new 16-digit password
+Security → App Passwords
 
-Use it as MAIL_SECRET
+Create 16-digit password
+
+Use as MAIL_SECRET
 
 🧪 Troubleshooting
 ❌ Chat not responding?
 
-Check backend console for errors
+Check backend console
 
-Make sure OpenAI key has credits
+Ensure correct model (gpt-3.5-turbo-instruct)
 
-Ensure model is correct: "gpt-3.5-turbo-instruct"
+Make sure your OpenAI account has credit
 
 ❌ Email not sending?
 
-Gmail App Password must be used
+Use Gmail App Password, not normal password
 
-SMTP only works with real Gmail
+Ensure less secure app access is allowed
 
-❌ 500 error?
+❌ Backend returning 500?
 
-Usually incorrect model or invalid OpenAI key
+Wrong OpenAI API key
 
-Check Network Tab → Response JSON
+Incorrect model
+
+Problem with env variables
+
+✨ Author
+
+Gargi Gogulwar
