@@ -97,7 +97,8 @@ MAIL_SECRET=your_app_password
 🟩 Frontend (client/.env.local)
 VITE_CLIENT_ID=your_google_oauth_id
 ```
-🧩 How to Run the Project Locally
+# 🧩 How to Run the Project Locally
+
 1️⃣ Clone the Repository
 git clone https://github.com/GargiGogulwar/ChatGPT-CLONE.git
 
@@ -133,7 +134,8 @@ Create 16-digit password
 
 Use as MAIL_SECRET
 
-🧪 Troubleshooting
+# 🧪 Troubleshooting
+
 ❌ Chat not responding?
 
 Check backend console
@@ -156,6 +158,7 @@ Incorrect model
 
 Problem with env variables
 
-✨ Author
+# ✨ Author
 
 Gargi Gogulwar
+
