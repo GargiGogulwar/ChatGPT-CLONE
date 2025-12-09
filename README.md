@@ -65,18 +65,31 @@ Supports **user authentication**, **email verification**, **JWT-based login**, a
 
 ChatGPT-CLONE/
 │
+
 ├── client/ # Frontend (React + Vite)
+
 │ ├── src/
+
 │ ├── public/
+
 │ └── .env.local
+
 │
+
 ├── server/ # Backend (Node + Express)
+
 │ ├── routes/
+
 │ ├── controllers/
+
 │ ├── models/
+
 │ ├── db/
+
 │ └── .env
+
 │
+
 └── README.md
 
 
@@ -161,4 +174,5 @@ Problem with env variables
 # ✨ Author
 
 Gargi Gogulwar
+
 
